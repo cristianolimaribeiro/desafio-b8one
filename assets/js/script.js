@@ -5,8 +5,6 @@ let btnMinus = document.querySelector('#minus')
 let counterVal = 1
 counter.innerText = counterVal
 
-
-
 setInterval(function () {
     responsiveWindow()
 }, 1000);
@@ -33,25 +31,21 @@ function decrementValue() {
     }
     counter.innerText = counterVal
 }
-function responsiveWindow() {
 
+function responsiveWindow() {
     window.onresize = (el) => {
         el = window.outerWidth
+
         if (el >= 1366) {
             document.querySelector('#search').placeholder = "What are you looking for?"
-            document.querySelector('.bag').innerHTML = `<a href="#" id="user"><img src="./assets/images/user.svg" alt="user"><span>login</span></a>
-                                                        <a href="#" id="wishlist"><img src="./assets/images/heart.svg" alt="wishlist"><span>wishlist</span></a>
-                                                        <a href="#" id="bag"><img src="./assets/images/bag.svg" alt="bag"></a>`
+            document.getElementById('user').classList.remove('remove')
+            document.getElementById('wishlist').classList.remove('remove')
         } else {
             document.querySelector('#search').placeholder = " "
-            document.getElementById('user').remove()
-            document.getElementById('wishlist').remove()
+            document.getElementById('user').classList.add('remove')
+            document.getElementById('wishlist').classList.add('remove')
         }
-
     }
-
-
-
 }
 
 

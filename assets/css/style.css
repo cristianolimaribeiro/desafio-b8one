@@ -14,25 +14,32 @@ ul{
 }
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
-    max-width: 330px;
+    max-width: 328px;
+    margin: auto;
     height: 56px;
     padding: 14px 0;
+
 }
 section {
     width: 100%;
     max-width: 328px;
     margin: auto;
 }
+.logo_area{width: 100%;
+}
 
 .header_components{
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     width:100%;
     height: 56px;
+    margin: auto;
 }
+
 .search{
     justify-content: flex-end;
     width: 150px;
@@ -78,6 +85,9 @@ nav::-webkit-scrollbar{
 .home a{
     font-size: 12px;
     color: #40464D;
+}
+.remove{
+    display: none;
 }
 /* -------- SECTION PRODUCT CART--------*/
 
